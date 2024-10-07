@@ -3,7 +3,7 @@ package cis4615_HW2;
 public class R08_VNA00_J {
 
 	final class ControlledStop implements Runnable {
-		private boolean done = false;
+		private volatile boolean done = false;
 		  
 		@Override public void run() {
 			while (!done) {
